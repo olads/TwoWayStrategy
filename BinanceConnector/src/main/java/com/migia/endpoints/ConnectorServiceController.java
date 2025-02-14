@@ -16,6 +16,7 @@ import java.util.Arrays;
 import java.util.List;
 
 @RestController
+@CrossOrigin
 public class ConnectorServiceController {
 
 
@@ -28,6 +29,11 @@ public class ConnectorServiceController {
     @GetMapping("/data")
     public List<History> getData(){
        return connector.getHistory("BTCUSDT");
+    }
+
+    @GetMapping("/data/{limit}")
+    public List<History> getData(@PathVariable int limit){
+      return connector.getHistory("BTCUSDT", limit);
     }
 
     @PostMapping("/data")

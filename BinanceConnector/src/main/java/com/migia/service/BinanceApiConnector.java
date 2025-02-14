@@ -40,6 +40,10 @@ public class BinanceApiConnector {
         return getHistory(symbol,"1h",20);
     }
 
+    public List<History> getHistory(String symbol, int length){
+        return getHistory(symbol,"1h", length);
+    }
+
     private String parseUrl(String symbol,String interval,int limit){
         StringBuilder builder = new StringBuilder(baseUrl);
         builder.append("?symbol=")

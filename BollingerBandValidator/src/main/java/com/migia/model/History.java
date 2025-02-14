@@ -22,9 +22,6 @@ public class History {
         this.close = close;
     }
     
-    public History() {
-    	
-    }
 
     public double getHigh() {
         return high;

@@ -24,7 +24,9 @@ public class Parser {
     }
 
     public History parseArrayListToHistory(ArrayList list){
+       // System.out.println(list.get(0));
         History currency = new History();
+        currency.setTime((Long) list.get(0));
         currency.setOpen(Double.valueOf((String) list.get(1)));
         currency.setHigh(Double.valueOf((String) list.get(2)));
         currency.setLow(Double.valueOf((String) list.get(3)));

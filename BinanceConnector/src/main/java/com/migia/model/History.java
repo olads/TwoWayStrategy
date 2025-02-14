@@ -7,8 +7,11 @@ import java.util.List;
 
 
 @ToString
+@Getter
+@Setter
 public class History {
 
+long time;
 
 double open;
 
